@@ -1,0 +1,36 @@
+/* ==========================================================================
+   # Base styles, variables & resets
+   ========================================================================== */
+
+:root {
+  --colorTextMain: #333333;
+  --colorTextSub:  #858585;
+  
+  --sizePixel:     0.0625rem;
+  --sizeSpace10:   0.625rem;
+  --sizeSpace13:   0.8125rem;
+  --sizeSpace14:   0.875rem;
+  --sizeSpace15:   0.9375rem;
+
+  --sizeH1:        1.6875rem;
+  --sizeH2:        1.125rem;
+  --sizeH3:        0.875rem;
+  --sizeText:      0.75rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--colorTextMain);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}

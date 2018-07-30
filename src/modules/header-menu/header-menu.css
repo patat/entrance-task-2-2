@@ -1,0 +1,51 @@
+/* ==========================================================================
+   # Module header-menu
+   ========================================================================== */
+
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: calc(var(--sizePixel) * 63);
+  left: 0;
+  width: 100%;
+  padding-left: calc(var(--sizePixel) * 20);
+  padding-right: calc(var(--sizePixel) * 20);
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-out;
+}
+
+  .header-menu__burger-icon {
+    width: 1rem;
+    height: calc(var(--sizePixel) * 13.3);
+  }
+
+  .header-menu__item {
+    margin-bottom: 0.5rem;
+  }
+
+  .header-menu__item--active {
+    & .header-menu__link {
+      opacity: 1;
+    }
+  }
+
+  .header-menu__link {
+    position: relative;
+    display: inline-block;
+    top: 0.125rem;
+    color: var(--colorTextMain);
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: bold;
+    opacity: 0.6;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+.header-menu--active {
+  max-height: calc(var(--sizePixel) * 200);
+}

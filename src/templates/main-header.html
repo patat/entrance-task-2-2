@@ -1,0 +1,10 @@
+<!-- Start main-header -->
+<header class="main-header">
+  <picture>
+    <source media="(-webkit-min-device-pixel-ratio: 1.25)" srcset="<%=require('../images/main-logo@2x.png')%>">
+    <source media="(min-resolution: 120dpi)" srcset="<%=require('../images/main-logo@2x.png')%>%>">
+    <img class="main-header__logo" src="require('../images/main-logo@1x.png')%>" alt="Яндекс Дом">
+  </picture>
+  <%= require('../modules/header-menu/header-menu.html')({}) %>
+</header>
+<!-- End main-header -->
