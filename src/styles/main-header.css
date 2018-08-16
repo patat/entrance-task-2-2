@@ -11,14 +11,10 @@
   height: var(--headerHeight);
   padding-left: calc(var(--sizePixel) * 20);
   padding-right: calc(var(--sizePixel) * 20);
+  overflow: hidden;
 }
 
   .main-header__logo {
     width: calc(var(--sizePixel) * 110);
     height: calc(var(--sizePixel) * 37);
-  }
-
-  .main-header__menu {
-/*    margin-left: 3.25rem;
-    margin-bottom: 0.0625rem;*/
   }
