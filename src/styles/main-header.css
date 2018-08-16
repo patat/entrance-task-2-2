@@ -8,14 +8,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: calc(var(--sizePixel) * 63);
+  height: var(--headerHeight);
   padding-left: calc(var(--sizePixel) * 20);
   padding-right: calc(var(--sizePixel) * 20);
 }
 
   .main-header__logo {
-    width: calc(var(--sizePixel) * 108);
-    height: calc(var(--sizePixel) * 27);
+    width: calc(var(--sizePixel) * 110);
+    height: calc(var(--sizePixel) * 37);
   }
 
   .main-header__menu {

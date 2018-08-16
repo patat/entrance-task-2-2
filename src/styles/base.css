@@ -16,6 +16,8 @@
   --sizeH2:        1.125rem;
   --sizeH3:        0.875rem;
   --sizeText:      0.75rem;
+
+  --headerHeight:  3.9375rem;
 }
 
 html {

@@ -1,12 +1,12 @@
 /*
 * Main entrypoint
-*
 */
-import headerMenu from '../modules/header-menu/header-menu';
+
+import mainMenu from '../modules/main-menu/main-menu';
 
 export default function app() {
   document.addEventListener('DOMContentLoaded', function() {
     console.log('It works!');
-    headerMenu();
+    mainMenu(document.querySelector('.main-menu'));
   });
 }
