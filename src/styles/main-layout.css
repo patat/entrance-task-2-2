@@ -1,0 +1,23 @@
+/* ==========================================================================
+   # Layout of the main section of the page
+   ========================================================================== */
+.main-layout {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: calc(var(--sizePixel) * 20);
+  padding-right: calc(var(--sizePixel) * 20);
+}
+  .main-layout__col {
+    width: 100%;
+  }
+
+@media (min-width: 1366px) {
+  .main-layout {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+    .main-layout__col--desktop50 {
+      width: 50%;
+    }
+}

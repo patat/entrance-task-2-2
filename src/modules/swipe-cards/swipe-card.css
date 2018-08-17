@@ -1,0 +1,62 @@
+/* ==========================================================================
+   # Cards for Events, Scripts and Devices
+   ========================================================================== */
+.swipe-card {
+  position: relative;
+  width: calc(var(--sizePixel) * 200);
+  height: calc(var(--sizePixel) * 120);
+  overflow: hidden;
+  background-color: #F7F7F7;
+  border-radius: calc(var(--sizePixel) * 20);
+  
+  transition: all .15s ease-in-out;
+}
+
+  .swipe-card__icon {
+    position: absolute;
+    left: calc(var(--sizePixel) * 14);
+    top: calc(var(--sizePixel) * 14);
+    width: calc(var(--sizePixel) * 24);
+    height: calc(var(--sizePixel) * 24);
+  }
+
+  .swipe-card__body {
+    position: absolute;
+    bottom: calc(var(--sizePixel) * 14);
+    left: calc(var(--sizePixel) * 15);
+    right: calc(var(--sizePixel) * 15);
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .swipe-card__title {
+    font-size: calc(var(--sizePixel) * 14);
+    line-height: calc(16 / 14);
+  }
+
+  .swipe-card__status {
+    margin-top: calc(var(--sizePixel) * 5);
+    font-size: calc(var(--sizePixel) * 12);
+    line-height: calc(14 / 12);
+    color: var(--colorTextSub);
+  }
+
+.swipe-card--script {
+  &.swipe-card {
+    height: calc(var(--sizePixel) * 100);
+  }
+}
+
+.swipe-card:hover {
+  background: #FFFFFF;
+  box-shadow: 0 calc(var(--sizePixel) * 2) calc(var(--sizePixel) * 6) 0 rgba(197,186,186,0.50);
+  cursor: pointer;
+}
+
+@media (min-width: 1366px) {
+  .swipe-card--event {
+    margin-top: calc(var(--sizePixel) * 5);
+    margin-bottom: calc(var(--sizePixel) * 10);
+  }
+}

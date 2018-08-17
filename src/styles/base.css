@@ -1,5 +1,6 @@
 /* ==========================================================================
    # Base styles, variables & resets
+   # using postcss-cssnext for variables
    ========================================================================== */
 
 :root {
@@ -7,15 +8,6 @@
   --colorTextSub:  #858585;
   
   --sizePixel:     0.0625rem;
-  --sizeSpace10:   0.625rem;
-  --sizeSpace13:   0.8125rem;
-  --sizeSpace14:   0.875rem;
-  --sizeSpace15:   0.9375rem;
-
-  --sizeH1:        1.6875rem;
-  --sizeH2:        1.125rem;
-  --sizeH3:        0.875rem;
-  --sizeText:      0.75rem;
 
   --headerHeight:  3.9375rem;
 }

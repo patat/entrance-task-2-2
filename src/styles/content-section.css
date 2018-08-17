@@ -1,0 +1,23 @@
+/* ==========================================================================
+   # Content section utility classes,
+   # * no corresponding html file
+   ========================================================================== */
+.content-section {
+}
+
+  .content-section__heading {
+    font-size: calc(var(--sizePixel) * 18);
+    line-height: calc(21 / 18);
+  }
+
+@media (min-width: 1366px) {
+  .content-section {
+    padding-top: calc(var(--sizePixel) * 21);
+    padding-bottom: calc(var(--sizePixel) * 20);
+  }
+
+  .content-section__header {
+    padding-top: calc(var(--sizePixel) * 15);
+    padding-bottom: calc(var(--sizePixel) * 20);
+  }
+}

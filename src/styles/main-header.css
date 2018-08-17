@@ -22,7 +22,8 @@
 @media (min-width: 1366px) {
   .main-header {
     justify-content: flex-start;
-    height: calc(var(--sizePixel) * 92);
+    height: calc(var(--sizePixel) * 94);
+    padding-bottom: 2px;
     border-bottom: var(--sizePixel) solid #F0F0F0;
   }
     .main-header__logo {

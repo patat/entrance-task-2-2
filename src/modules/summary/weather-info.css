@@ -1,0 +1,62 @@
+/* ==========================================================================
+   # Weather Info Widget
+   ========================================================================== */
+.weather-info {
+  display: flex;
+  padding-top: calc(var(--sizePixel) * 5);
+}
+
+  .weather-info__item {
+    margin-right: calc(var(--sizePixel) * 19);
+  }
+
+  .weather-info__label {
+    font-size: calc(var(--sizePixel) * 12);
+    line-height: 1.167;
+    color: var(--colorTextSub);
+    margin-bottom: calc(var(--sizePixel) * 5);
+  }
+
+  .weather-info__content {
+    display: flex;
+    align-items: center;
+  }
+
+  .weather-info__temperature {
+    font-size: 1.5rem;
+    line-height: 1.167;
+    font-weight: bold;
+  }
+
+  .weather-info__icon {
+    width: calc(var(--sizePixel) * 19);
+    height: calc(var(--sizePixel) * 19);
+    margin-left: calc(var(--sizePixel) * 5);
+  }
+
+@media (min-width: 1366px) {
+  .weather-info {
+    padding-top: calc(var(--sizePixel) * 10);
+  }
+
+    .weather-info__label {
+      font-size: calc(var(--sizePixel) * 14);
+      line-height: calc(16 / 14);
+      margin-bottom: calc(var(--sizePixel) * 4);
+    }
+
+    .weather-info__content {
+      align-items: baseline;
+    }
+
+    .weather-info__temperature {
+      font-size: calc(var(--sizePixel) * 36);
+      line-height: calc(42 / 36);
+    }
+
+    .weather-info__icon {
+      width: calc(var(--sizePixel) * 26);
+      height: calc(var(--sizePixel) * 26);
+      margin-left: calc(var(--sizePixel) * 6);
+    }
+}

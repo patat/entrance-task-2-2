@@ -1,0 +1,15 @@
+<!-- Start swipe-card -->
+<section class="swipe-card <%= classes %>">
+  <div class="swipe-card__top">
+    <svg class="swipe-card__icon">
+      <use xlink:href="#<%= data.icon %>"></use>
+    </svg>
+  </div>
+  <div class="swipe-card__body">
+    <% if (data.status) { %>
+    <p class="swipe-card__status"><%= data.status %></p>
+    <% } %>
+    <h3 class="swipe-card__title"><%= data.title %></h3>
+  </div>
+</section>
+<!-- End swipe-card -->

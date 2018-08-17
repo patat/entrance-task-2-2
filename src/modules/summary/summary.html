@@ -1,0 +1,40 @@
+<!-- Start summary -->
+<section class="summary content-section <%= classes %>">
+  <header class="summary__header content-section__header">
+    <h2 class="content-section__heading">Главное</h2>
+  </header>
+  <div class="summary__body">
+    <div class="summary__info">
+      <h1 class="summary__heading">Привет, Геннадий!</h1>
+      <p class="summary__subheading">Двери и окна закрыты, сигнализация включена.</p>
+      <%= require('./weather-info.html')({}) %>
+    </div>
+    <%= require('../swipe-cards/swipe-cards.html')({
+      classes: {
+        cards: 'swipe-cards--events',
+        card: 'swipe-card--event swipe-cards__card'
+      },
+      cards: [
+        {
+          icon: 'icon-temperature',
+          title: 'Philips Cooler',
+          status: 'Начнет охлаждать в 16:30'
+        },
+        {
+          icon: 'icon-sun',
+          title: 'Xiaomi Yeelight LED Smart Bulb',
+          status: 'Включится в 17:00'
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Выключить весь свет в доме и во дворе'
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Выключить весь свет в доме и во дворе'
+        }
+      ]
+    }) %>
+  </div>
+</section>
+<!-- End summary -->

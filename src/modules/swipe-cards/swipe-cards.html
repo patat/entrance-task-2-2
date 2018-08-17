@@ -1,0 +1,19 @@
+<!-- Start swipe-cards -->
+<div class="swipe-cards <%= classes.cards %>">
+    <div class="swipe-cards__container">
+      <div class="swipe-cards__slide">
+        <% cards.forEach(function(card) { %>
+          <%= require('./swipe-card.html')({
+            classes: classes.card,
+            data: card
+          }) %>
+        <% }) %>
+      </div>
+    </div>
+    <div class="swipe-cards__hint">
+      <svg class="swipe-cards__hint-icon">
+        <use xlink:href="#icon-arrow-double-up"></use>
+      </svg>
+    </div>
+</div>
+<!-- End swipe-cards -->

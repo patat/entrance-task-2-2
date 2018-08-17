@@ -1,0 +1,71 @@
+/* ==========================================================================
+   # Summary block styles
+   ========================================================================== */
+.summary {
+  padding-top: calc(var(--sizePixel) * 2);
+}
+
+  .summary__header {
+    display: none;
+  }
+
+  .summary__body {
+    height: calc(var(--sizePixel) * 282);
+    padding: calc(var(--sizePixel) * 20);
+    padding-top: calc(var(--sizePixel) * 21);
+    background: url('./images/bg@2x.png');
+    background-position: 40% top;
+    background-size: 180%;
+    border-radius: 7%;
+  }
+
+  .summary__heading {
+    font-size: calc(var(--sizePixel) * 18);
+    line-height: calc(21 / 18);
+    margin-bottom: calc(var(--sizePixel) * 5);
+  }
+
+  .summary__subheading {
+    font-size: calc(var(--sizePixel) * 12);
+    line-height: calc(14 / 12);
+    margin-bottom: calc(var(--sizePixel) * 9);
+  }
+
+@media (min-width: 1366px) {
+.summary {
+  padding-top: calc(var(--sizePixel) * 14);
+}
+    .summary__header {
+      display: block;
+    }
+
+    .summary__info {
+      width: 60%;
+    }
+
+    .summary__heading {
+      padding-top: calc(var(--sizePixel) * 11);
+      font-size: calc(var(--sizePixel) * 27);
+      line-height: calc(31 / 27);
+    }
+
+    .summary__body {
+      height: calc(var(--sizePixel) * 331);
+      padding-left: calc(var(--sizePixel) * 25);
+      padding-top: calc(var(--sizePixel) * 15);
+      margin-top: calc(var(--sizePixel) * -1);
+      margin-right: calc(var(--sizePixel) * 13);
+      background-position: center top;
+      background-size: cover;
+      border-radius: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    .summary__subheading {
+      font-size: calc(var(--sizePixel) * 14);
+      line-height: calc(16 / 14);
+      margin-bottom: calc(var(--sizePixel) * 15);
+    }
+}

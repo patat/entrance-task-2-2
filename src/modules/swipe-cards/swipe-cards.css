@@ -1,0 +1,98 @@
+/* ==========================================================================
+   # Swipe Crads widget
+   ========================================================================== */
+.swipe-cards {
+  position: relative;
+  overflow: hidden;
+  height: calc(var(--sizePixel) * 145);
+  margin-left: calc(var(--sizePixel) * -20);
+  margin-right: calc(var(--sizePixel) * -20);
+  padding-left: calc(var(--sizePixel) * 20);
+  padding-top: calc(var(--sizePixel) * 20);
+}
+
+  .swipe-cards__container {
+    position: absolute;
+    top: 0;
+    bottom: calc(var(--sizePixel) * -15);
+    left: 0;
+    right: 0;
+    overflow: scroll;
+  }
+
+  .swipe-cards__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    padding-right: calc(var(--sizePixel) * 20);
+  }
+
+  .swipe-cards__card {
+    margin-left: calc(var(--sizePixel) * 20);
+    margin-top: calc(var(--sizePixel) * 20);
+  }
+
+  .swipe-cards__hint {
+    display: none;
+  }
+
+@media (min-width: 1366px) {
+  .swipe-cards--events {
+    height: auto;
+    width: calc(var(--sizePixel) * 225);
+    margin-right: calc(var(--sizePixel) * -5);
+    margin-top: calc(var(--sizePixel) * -15);
+    margin-bottom: calc(var(--sizePixel) * -20);
+    margin-left: 0;
+
+    &  .swipe-cards__container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: calc(var(--sizePixel) * -15);
+      overflow: scroll;
+    }
+
+    & .swipe-cards__slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: auto;
+      display: flex;
+      flex-direction: column;
+      padding-right: calc(var(--sizePixel) * 15);
+      padding-bottom: calc(var(--sizePixel) * 10);
+      padding-top: calc(var(--sizePixel) * 15);
+    }
+
+    &  .swipe-cards__hint {
+      display: flex;
+      position: absolute;
+      width: calc(var(--sizePixel) * 200);
+      height: calc(var(--sizePixel) * 41);
+      background-color: #F7F7F7;
+      border-radius: calc(var(--sizePixel) * 20);
+      left: calc(var(--sizePixel) * 20);
+      bottom: 0;
+      padding-right: calc(var(--sizePixel) * 4);
+      transition: all .6s ease-out;
+    }
+
+    &  .swipe-cards__hint-icon {
+      margin: auto;
+      width: calc(var(--sizePixel) * 16);
+      height: calc(var(--sizePixel) * 16);
+    }
+
+    &  .swipe-cards__hint--hidden {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  
+}
