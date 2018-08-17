@@ -78,3 +78,35 @@
 .main-menu__burger-icon--active {
   transform: scale(1.2, 1.4);
 }
+
+@media (min-width: 1366px) {
+  .main-menu {
+    flex-direction: row;
+    width: 100%;
+    padding-left: calc(var(--sizePixel) * 23);
+  }
+    .main-menu__container {
+      position: static;
+      background: transparent;
+    }
+
+    .main-menu__container--hidden {
+      z-index: 0;
+      opacity: 1;
+
+      & .main-menu {
+        transform: none;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .main-menu__burger {
+      display: none;
+    }
+
+    .main-menu__item {
+      margin-bottom: 0;
+      margin-left: calc(var(--sizePixel) * 27);
+    }
+}

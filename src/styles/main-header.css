@@ -18,3 +18,14 @@
     width: calc(var(--sizePixel) * 110);
     height: calc(var(--sizePixel) * 37);
   }
+
+@media (min-width: 1366px) {
+  .main-header {
+    justify-content: flex-start;
+    height: calc(var(--sizePixel) * 92);
+    border-bottom: var(--sizePixel) solid #F0F0F0;
+  }
+    .main-header__logo {
+      margin-left: calc(var(--sizePixel) * 20);
+    }
+}
