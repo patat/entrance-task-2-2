@@ -3,5 +3,11 @@
   <%= require('../modules/summary/summary.html')({
     classes: 'main-layout__col main-layout__col--desktop50'
   }) %>
+  <%= require('../modules/widget-section/widget-section.html')({
+    classes: 'main-layout__col main-layout__col--desktop50 widget-section--scripts',
+    data: {
+      heading: 'Избранные сценарии'
+    },
+  }) %>
 </section>
 <!-- End main-layout -->

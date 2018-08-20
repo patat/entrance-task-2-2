@@ -3,7 +3,15 @@
    # * no corresponding html file
    ========================================================================== */
 .content-section {
+  padding-top: calc(var(--sizePixel) * 21);
 }
+
+  .content-section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: calc(var(--sizePixel) * 10);
+  }
 
   .content-section__heading {
     font-size: calc(var(--sizePixel) * 18);
@@ -12,7 +20,7 @@
 
 @media (min-width: 1366px) {
   .content-section {
-    padding-top: calc(var(--sizePixel) * 21);
+    padding-top: calc(var(--sizePixel) * 15);
     padding-bottom: calc(var(--sizePixel) * 20);
   }
 

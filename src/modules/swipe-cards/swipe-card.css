@@ -45,6 +45,10 @@
 .swipe-card--script {
   &.swipe-card {
     height: calc(var(--sizePixel) * 100);
+    margin-left: calc(var(--sizePixel) * 5);
+    margin-right: calc(var(--sizePixel) * 10);
+    margin-top: calc(var(--sizePixel) * 5);
+    margin-bottom: calc(var(--sizePixel) * 10);
   }
 }
 

@@ -16,6 +16,13 @@ html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--colorTextMain);
+  
+}
+
+@media (min-width: 1366px) {
+  html {
+    font-size: calc(1600vw / 1366);
+  }
 }
 
 *, *:before, *:after {

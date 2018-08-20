@@ -10,5 +10,8 @@ export default function app() {
     console.log('It works!');
     mainMenu();
     swipeCards('.swipe-cards--events');
+    swipeCards('.swipe-cards--scripts', {
+      perSlide: 9
+    });
   });
 }
