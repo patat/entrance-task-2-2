@@ -1,5 +1,8 @@
 export default class WidgetWheel {
-  constructor(el) {
+  constructor(el, options = {}) {
+    this.valFrom = options.from || 10;
+    this.valTo = options.to || 30;
+    this.initialVal = options.initial || 20;
     this.spokesNum = 120;
     this.step = 2.5;
     this.degrees = [...Array(this.spokesNum).keys()]
@@ -19,10 +22,16 @@ export default class WidgetWheel {
     });
 
     this.spokes = document.querySelectorAll('.wheel__spoke');
-    this.cursorPosition = 100;
+    
+    this.cursorPosition = 90;
     //console.log(spokes);
     this.updateSpokes();
   }
+
+  // updateCursorPosition() {
+  //   const valRange = this.valTo - this.valFrom + 1;
+  //   //this.cursorPosition = 
+  // }
 
   updateSpokes() {
     window.requestAnimationFrame(() => {

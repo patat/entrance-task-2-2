@@ -4,7 +4,7 @@
 
 
 .main-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -14,7 +14,6 @@
   height: var(--headerHeight);
   padding-left: calc(var(--sizePixel) * 20);
   padding-right: calc(var(--sizePixel) * 20);
-  overflow: hidden;
   background: #fff;
   z-index: 100;
 }

@@ -1,6 +1,6 @@
 <!-- Start swipe-cards -->
 <div class="swipe-cards <%= classes.cards %>">
-    <div class="swipe-cards__container">
+    <div class="swipe-cards__container" touch-action="manipulation">
       <div class="swipe-cards__slide">
         <% cards.forEach(function(card) { %>
           <%= require('./swipe-card.html')({

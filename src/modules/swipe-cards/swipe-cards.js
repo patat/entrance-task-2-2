@@ -51,9 +51,6 @@ export default function swipeCards(cardsClass, options = {}) {
       // in pixels
       slideWidth = swipeCardsSlides[0].offsetWidth;
     }
-    
-
-    console.log(slideWidth);
 
     numSlides = Math.floor(cards.length / options.perSlide) + (cards.length % options.perSlide === 0 ? 0 : 1);
 

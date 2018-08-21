@@ -39,10 +39,15 @@ p {
 .main-wrapper {
   position: relative;
   min-height: 100vh;
+  padding-top: var(--headerHeight);
 }
 
 @media (min-width: 1366px) {
   html {
     font-size: calc(1600vw / 1366);
+  }
+
+  .main-wrapper {
+    padding-top: 5.875rem;
   }
 }

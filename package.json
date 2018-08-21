@@ -31,6 +31,7 @@
     "jquery": "^3.3.1",
     "jquery-pixel-perfect": "^1.0.0",
     "mini-css-extract-plugin": "^0.4.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.6",
