@@ -43,7 +43,7 @@ export default function swipeCards(cardsClass, options = {}) {
   }
 
 
-  function initCardsCarousel(cards, numSlides) {
+  function initCardsCarousel(cards) {
     const swipeCardsSlides = swipeCards.querySelectorAll('.swipe-cards__slide');
     // in rems
     slideWidth = options.perSlide * 13.4375;
@@ -78,6 +78,7 @@ export default function swipeCards(cardsClass, options = {}) {
     swipeCardsSlides.forEach(slide => {
       swipeCardsContainer.removeChild(slide);
     })
+    swipeCardsContainer.style.transform = '';
 
     // wrap each batch of cards into slide, then remove initial slide
     for (let i = 0; i < numSlides; i++) {
@@ -111,8 +112,8 @@ export default function swipeCards(cardsClass, options = {}) {
   }
 
   function destroyCardsCarousel() {
-    //remove outdated listeners if any
     swipeCardsControls.classList.add('swipe-cards__controls--hidden');
+    //remove outdated listeners if any
     swipeCardsControlNext.removeEventListener('click', nextSlide);
     swipeCardsControlPrev.removeEventListener('click', prevSlide);
     swipeCardsContainer.removeEventListener('swipeLeft', nextSlide);

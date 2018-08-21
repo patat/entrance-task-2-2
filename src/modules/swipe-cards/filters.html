@@ -2,7 +2,7 @@
 <div class="filters">
     <% filters.forEach(function(filter, index) { %>
       <div 
-        class="filters__item<%= index === 0 ? ' filters__item--active' : '' %> "
+        class="filters__item clickable<%= index === 0 ? ' filters__item--active' : '' %> "
         data-filter="<%= filter.slug %>"
       >
         <%= filter.title %>
