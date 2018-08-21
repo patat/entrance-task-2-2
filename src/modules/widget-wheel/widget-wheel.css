@@ -1,0 +1,88 @@
+/* ==========================================================================
+   # Widget Wheel
+   ========================================================================== */
+.widget-wheel {
+  padding-left: calc(var(--sizePixel) * 5);
+  padding-top: calc(var(--sizePixel) * 6);
+}
+
+.wheel {
+  display: flex;
+  width: calc(var(--sizePixel) * 221);
+  height: calc(var(--sizePixel) * 221);
+  margin: 0 auto;
+}
+
+  .wheel__disc {
+    position: relative;
+    margin: auto;
+    width: calc(var(--sizePixel) * 178);
+    height: calc(var(--sizePixel) * 178);
+    background: #FEFEFE;
+    box-shadow: 0 2px 4px 0 rgba(134,121,71,0.45);
+    border-radius: 100%;
+  }
+  
+  .wheel__value {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(var(--sizePixel) * 66);
+    line-height: calc(77 / 66);
+    font-weight: bold;
+  }
+
+  .wheel__cursor-container {
+    position: absolute;
+    font-size: calc(var(--sizePixel) * 6);
+    left: calc(50% - 0.35rem);
+    top: 0;
+    transform-origin: center calc(var(--sizePixel) * 80);
+  }
+
+  .wheel__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #333;
+    text-align: left;
+    transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+    width:  1em;
+    height: 1em;
+    border-top-right-radius: 50%;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      width:  1em;
+      height: 1em;
+      border-top-right-radius: 50%;
+    }
+
+    &:before {
+      transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+    }
+
+    &:after {
+      transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+    }
+  }
+
+  .wheel__spoke {
+    position: absolute;
+    top: calc(var(--sizePixel) * -22);
+    left: 50%;
+    margin-left: calc(var(--sizePixel) * -1);
+    width: calc(var(--sizePixel) * 1);
+    height: calc(var(--sizePixel) * 22);
+    background: #000;
+    transform-origin: center calc(var(--sizePixel) * 111);
+  }
+
+  .wheel__spoke--active {
+    background: #F5A623;
+  }
+

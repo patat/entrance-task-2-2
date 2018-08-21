@@ -1,0 +1,73 @@
+/* ==========================================================================
+   # Sun Icon
+   ========================================================================== */
+.sun-icon {
+  display: flex;
+}
+
+  .sun-icon__disc {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    border: calc(var(--sizePixel) * 2) solid #fff;
+    border-radius: 100%;
+  }
+
+  .sun-icon__ray {
+    position: absolute;
+    top: calc(var(--sizePixel) * -8);
+    left: 50%;
+    margin-left: calc(var(--sizePixel) * -1);
+    width: calc(var(--sizePixel) * 2);
+    height: calc(var(--sizePixel) * 3);
+    background: #fff;
+    border-radius: calc(var(--sizePixel) * 2);
+    transform-origin: center calc(var(--sizePixel) * 14);
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(135deg);
+    }
+
+    &:nth-child(4) {
+      transform: rotate(180deg);
+    }
+
+    &:nth-child(5) {
+      transform: rotate(225deg);
+    }
+
+    &:nth-child(6) {
+      transform: rotate(270deg);
+    }
+
+    &:nth-child(7) {
+      transform: rotate(315deg);
+    }
+  }
+
+.sun-icon--thick {
+
+  & .sun-icon__disc {
+    border: calc(var(--sizePixel) * 3) solid #fff;
+  }
+
+  & .sun-icon__ray {
+    top: calc(var(--sizePixel) * -13);
+    left: 50%;
+    margin-left: calc(var(--sizePixel) * -1);
+    width: calc(var(--sizePixel) * 3);
+    height: calc(var(--sizePixel) * 6);
+    background: #fff;
+    border-radius: calc(var(--sizePixel) * 3);
+    transform-origin: center calc(var(--sizePixel) * 18);
+  }
+}

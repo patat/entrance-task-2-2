@@ -26,4 +26,11 @@
 
 /* Footer
    ========================================================================== */
-@import './styles/main-footer.css'; 
+@import './styles/main-footer.css';
+
+/* Modals
+   ========================================================================== */
+@import './modules/modal/modal.css';
+@import './modules/widget-slider/widget-slider.css';
+@import './modules/widget-slider/sun-icon.css';
+@import './modules/widget-wheel/widget-wheel.css';

@@ -1,0 +1,23 @@
+<!-- Start widget-wheel -->
+<section class="widget-wheel <%= classes %>">
+  <% if (data.options) { %>
+  <div class="widget-wheel__options">
+    <div class="widget-wheel__options-inner">
+      <div class="widget-wheel__options-list">
+        <% data.options.forEach(function(option, index) { %>
+          <div class="widget-wheel__option clickable<%= index === 0 ? ' widget-wheel__option--active' : '' %>"><%= option %></div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+  <% } %>
+  <div class="widget-wheel__wheel wheel">
+    <div class="wheel__disc">
+      <div class="wheel__value">+23</div>
+      <div class="wheel__cursor-container">
+        <div class="wheel__cursor"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End widget-wheel -->

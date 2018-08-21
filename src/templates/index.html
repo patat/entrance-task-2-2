@@ -14,7 +14,38 @@
       <%= require('./main-layout.html')({}) %>
       <%= require('./main-footer.html')({}) %>
     </div>
-
+    <%= require('../modules/modal/modal.html')({
+      classes: 'modal--light',
+      data: {
+        type: 'light',
+        icon: 'icon-sun',
+        value: '',
+        title: 'Xiaomi Yeelight LED Smart Bulb',
+        info: 'Включится в 17:00',
+        options: ['Вручную', 'Дневной свет', 'Вечерний свет', 'Рассвет']
+      }
+    }) %>
+    <%= require('../modules/modal/modal.html')({
+      classes: 'modal--temperature',
+      data: {
+        type: 'temperature',
+        icon: 'icon-temperature--active',
+        value: '+23',
+        title: 'Elgato Eve Degree Connected',
+        info: 'Включено',
+        options: ['Вручную', 'Холодно', 'Тепло', 'Жарко']
+      }
+    }) %>
+    <%= require('../modules/modal/modal.html')({
+      classes: 'modal--floor',
+      data: {
+        type: 'floor',
+        icon: 'icon-temperature--active',
+        value: '+23',
+        title: 'Xiaomi Warm Floor',
+        info: 'Включено'
+      }
+    }) %>
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>

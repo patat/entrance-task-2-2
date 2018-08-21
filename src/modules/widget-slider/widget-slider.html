@@ -1,0 +1,38 @@
+<!-- Start widget-slider -->
+<section class="widget-slider <%= classes %>">
+  <% if (data.options) { %>
+  <div class="widget-slider__options">
+    <div class="widget-slider__options-inner">
+      <div class="widget-slider__options-list">
+        <% data.options.forEach(function(option, index) { %>
+          <div class="widget-slider__option clickable<%= index === 0 ? ' widget-slider__option--active' : '' %>"><%= option %></div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+  <% } %>
+  <div class="widget-slider__slider slider">
+    <div class="slider__before">
+      <% if (data.icon) { %>
+        <%= require('./sun-icon.html')({
+          classes: 'slider__icon sun-icon--thin'
+        }) %>
+      <% } %>
+      <% if (data.range) { %>
+        <div class="slider__from"><%= data.range.from %></div>
+      <% } %>
+    </div>
+    <div class="slider__cursor"></div>
+    <div class="slider__after">
+      <% if (data.icon) { %>
+        <%= require('./sun-icon.html')({
+          classes: 'slider__icon sun-icon--thick'
+        }) %>
+      <% } %>
+      <% if (data.range) { %>
+        <div class="slider__to"><%= data.range.to %></div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<!-- End widget-slider -->

@@ -1,0 +1,52 @@
+<!-- Start modal -->
+<section class="modal <%= classes %>">
+  <div class="modal__inner">
+    <div class="modal__body">
+      <div class="modal__header">
+        <div class="modal__info">
+          <div class="modal__value"><%= data.value %></div>
+          <svg class="modal__icon">
+            <use xlink:href="#<%= data.icon %>"></use>
+          </svg>
+        </div>
+        <h2 class="modal__heading"><%= data.title %></h2>
+        <p class="modal__subheading"><%= data.info %></p>
+      </div>
+      <div class="modal__widget">
+        <% if (data.type === 'light') { %>
+          <%= require('../widget-slider/widget-slider.html')({
+            classes: 'widget-slider--light',
+            data: {
+              options: data.options,
+              icon: data.icon
+            }
+          }) %>
+        <% } %>
+        <% if (data.type === 'temperature') { %>
+          <%= require('../widget-slider/widget-slider.html')({
+            classes: 'widget-slider--temperature',
+            data: {
+              options: data.options,
+              range: {
+                from: '–10',
+                to: '+30'
+              }
+            }
+          }) %>
+        <% } %>
+        <% if (data.type === 'floor') { %>
+          <%= require('../widget-wheel/widget-wheel.html')({
+            classes: 'widget-slider--floor',
+            data: {
+            }
+          }) %>
+        <% } %>
+      </div>
+    </div>
+    <div class="modal__buttons">
+      <div class="modal__btn modal__btn--apply clickable">Применить</div>
+      <div class="modal__btn modal__btn--close clickable">Закрыть</div>
+    </div>
+  </div>
+</section>
+<!-- End modal -->

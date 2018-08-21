@@ -96,6 +96,7 @@
     .main-menu__container--hidden {
       z-index: 0;
       opacity: 1;
+      display: block;
 
       & .main-menu {
         transform: none;

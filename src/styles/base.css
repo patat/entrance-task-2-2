@@ -19,12 +19,6 @@ html {
   
 }
 
-@media (min-width: 1366px) {
-  html {
-    font-size: calc(1600vw / 1366);
-  }
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -43,5 +37,12 @@ p {
 }
 
 .main-wrapper {
+  position: relative;
   min-height: 100vh;
+}
+
+@media (min-width: 1366px) {
+  html {
+    font-size: calc(1600vw / 1366);
+  }
 }
