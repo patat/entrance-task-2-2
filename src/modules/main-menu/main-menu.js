@@ -1,16 +1,41 @@
 export default function mainMenu() {
   const container = document.querySelector('.main-menu__container');
+  const menu = document.querySelector('.main-menu');
   const burger = document.querySelector('.main-menu__burger');
 
-  burger.addEventListener('click', () => {
-    container.classList.toggle('main-menu__container--hidden');
+  burger.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    if (container.classList.contains('main-menu__container--hidden')) {
+      showMenu();
+    } else {
+      hideMenu();
+    }
     burger.classList.remove('main-menu__burger-icon--active');
-    console.log('click');
   });
 
   burger.addEventListener('pointerdown', () => {
     burger.classList.add('main-menu__burger-icon--active');
   });
+
+  document.querySelector('.main-wrapper').addEventListener('click', () => {
+    hideMenu();
+  });
+
+  function showMenu() {
+    container.classList.remove('main-menu__container--hidden');
+    setTimeout(() => {
+      container.classList.remove('main-menu__container--hiding');
+      menu.classList.remove('main-menu--hidden');
+    }, 0);
+  }
+
+  function hideMenu() {
+    container.classList.add('main-menu__container--hiding');
+    menu.classList.add('main-menu--hidden');
+    setTimeout(() => {
+      container.classList.add('main-menu__container--hidden');
+    }, 200); 
+  }
 
   /* 
    * Menu Items

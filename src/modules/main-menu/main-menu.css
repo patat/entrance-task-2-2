@@ -66,13 +66,16 @@
     user-select: none;
   }
 
-.main-menu__container--hidden {
-  z-index: -1;
+.main-menu__container--hiding {
   opacity: 0;
+}
 
-  & .main-menu {
-    transform: translateX(-101%);
-  }
+.main-menu__container--hidden {
+  display: none;
+}
+
+.main-menu--hidden {
+  transform: translateX(-101%);
 }
 
 .main-menu__burger-icon--active {

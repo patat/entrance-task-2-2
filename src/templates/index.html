@@ -12,7 +12,9 @@
     <div class="main-wrapper">
       <%= require('./main-header.html')({}) %>
       <%= require('./main-layout.html')({}) %>
+      <%= require('./main-footer.html')({}) %>
     </div>
+
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>

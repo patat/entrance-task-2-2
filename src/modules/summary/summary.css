@@ -47,13 +47,13 @@
       padding-top: calc(var(--sizePixel) * 11);
       font-size: calc(var(--sizePixel) * 27);
       line-height: calc(31 / 27);
+      margin-bottom: calc(var(--sizePixel) * 7);
     }
 
     .summary__body {
       height: calc(var(--sizePixel) * 331);
       padding-left: calc(var(--sizePixel) * 25);
       padding-top: calc(var(--sizePixel) * 15);
-      margin-top: calc(var(--sizePixel) * -1);
       margin-right: calc(var(--sizePixel) * 13);
       background-position: center top;
       background-size: cover;
@@ -66,6 +66,6 @@
     .summary__subheading {
       font-size: calc(var(--sizePixel) * 14);
       line-height: calc(16 / 14);
-      margin-bottom: calc(var(--sizePixel) * 15);
+      margin-bottom: calc(var(--sizePixel) * 16);
     }
 }
