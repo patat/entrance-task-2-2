@@ -4,14 +4,12 @@
       <div class="widget-section__header-group">
         <h2 class="content-section__heading"><%= data.heading %></h2>
         <% if (data.filters) { %>
-          <div class="filters">
-          <% data.filters.forEach(function(filter, index) { %>
-            <button class="filter<%= index === 0 ? ' filter--active' : '' %> "><%= filter %></button>
-          <% }) %>
-          </div>
+          <%= require('../swipe-cards/filters.html')({
+            filters: data.filters
+          }) %>
         <% } %> 
       </div>
-      <div class="widget-section__controls swipe-cards__controls">
+      <div class="widget-section__controls swipe-cards__controls swipe-cards__controls--hidden">
         <div class="swipe-cards__control swipe-cards__control--prev">
           <svg class="swipe-cards__control-icon">
             <use xlink:href="#icon-arrow-left"></use>
@@ -26,54 +24,8 @@
     </header>
     <div class="widget-section__body">
       <%= require('../swipe-cards/swipe-cards.html')({
-        classes: {
-          cards: 'swipe-cards--scripts',
-          card: 'swipe-card--script swipe-cards__card'
-        },
-        cards: [
-          {
-            icon: 'icon-sun--active',
-            title: 'Выключить весь свет в доме и во дворе'
-          },
-          {
-            icon: 'icon-scheduled',
-            title: 'Я ухожу'
-          },
-          {
-            icon: 'icon-sun--active',
-            title: 'Включить свет в&nbsp;коридоре'
-          },
-          {
-            icon: 'icon-temperature--active',
-            title: 'Набрать горячую ванну',
-            status: 'Начнётся в 18:00'
-          },
-          {
-            icon: 'icon-temperature--active',
-            title: 'Сделать пол тёплым во всей квартире'
-          },
-          {
-            icon: 'icon-sun--active',
-            title: 'Выключить весь свет в доме и во дворе'
-          },
-          {
-            icon: 'icon-scheduled',
-            title: 'Я ухожу'
-          },
-          {
-            icon: 'icon-sun--active',
-            title: 'Включить свет в&nbsp;коридоре'
-          },
-          {
-            icon: 'icon-temperature--active',
-            title: 'Набрать горячую ванну',
-            status: 'Начнётся в 18:00'
-          },
-          {
-            icon: 'icon-temperature--active',
-            title: 'Сделать пол тёплым во всей квартире'
-          }
-        ]
+        classes: data.classes,
+        cards: data.cards
       }) %>
     </div>
   </section>

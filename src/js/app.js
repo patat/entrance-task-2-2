@@ -13,5 +13,8 @@ export default function app() {
     swipeCards('.swipe-cards--scripts', {
       perSlide: 9
     });
+    swipeCards('.swipe-cards--devices', {
+      perSlide: 6
+    });
   });
 }

@@ -1,5 +1,10 @@
 <!-- Start swipe-card -->
-<section class="swipe-card <%= classes %>">
+<section 
+  class="swipe-card <%= classes %>"
+  <%if (data.cat) { %>
+    data-cat="<%= data.cat.join(' ') %>"
+  <% } %>
+>
   <div class="swipe-card__top">
     <svg class="swipe-card__icon">
       <use xlink:href="#<%= data.icon %>"></use>

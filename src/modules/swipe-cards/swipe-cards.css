@@ -58,6 +58,24 @@
   }
 }
 
+.swipe-cards--devices {
+  & .swipe-cards__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    padding-right: calc(var(--sizePixel) * 10);
+    padding-left: calc(var(--sizePixel) * 15);
+    padding-top: calc(var(--sizePixel) * 14);
+    padding-bottom: calc(var(--sizePixel) * 10);
+  }
+
+  & .swipe-cards__container {
+    top: calc(var(--sizePixel) * -5);
+  }
+}
+
 @media (min-width: 1366px) {
   .swipe-cards__controls {
     display: flex;
@@ -76,6 +94,9 @@
 
   .swipe-cards__control {
     cursor: pointer;
+    width: calc(var(--sizePixel) * 16);
+    height: calc(var(--sizePixel) * 16);
+    overflow: hidden;
   }
 
   .swipe-cards__control--next {
@@ -88,6 +109,10 @@
       color: rgba(0, 0, 0, .3);
       cursor: default;
     }
+  }
+
+  .swipe-cards__controls--hidden {
+    display: none;
   }
 
   .swipe-cards--events {
@@ -162,6 +187,30 @@
       flex-wrap: wrap;
       padding: 0;
       padding-bottom: calc(var(--sizePixel) * 10);
+    }
+  }
+
+  .swipe-cards--devices {
+    height: calc(var(--sizePixel) * 135);
+    top: calc(var(--sizePixel) * -5);
+    margin-left: calc(var(--sizePixel) * -40);
+    margin-right: calc(var(--sizePixel) * -40);
+
+    & .swipe-cards__controls {
+      margin-top: calc(var(--sizePixel) * 8);
+    }
+
+  & .swipe-cards__slide {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: calc(var(--sizePixel) * 9);
+  }
+
+    & .swipe-cards__container {
+      top: calc(var(--sizePixel) * -10);
+      bottom: 0;
+      overflow: visible;
+      transition: transform .4s ease-in-out;
     }
   }
   

@@ -45,6 +45,12 @@
 .swipe-card--script {
   &.swipe-card {
     height: calc(var(--sizePixel) * 100);
+  }
+}
+
+.swipe-card--script,
+.swipe-card--device {
+  &.swipe-card {
     margin-left: calc(var(--sizePixel) * 5);
     margin-right: calc(var(--sizePixel) * 10);
     margin-top: calc(var(--sizePixel) * 5);
@@ -56,6 +62,10 @@
   background: #FFFFFF;
   box-shadow: 0 calc(var(--sizePixel) * 2) calc(var(--sizePixel) * 6) 0 rgba(197,186,186,0.50);
   cursor: pointer;
+}
+
+.swipe-card--hidden {
+  display: none;
 }
 
 @media (min-width: 1366px) {

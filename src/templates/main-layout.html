@@ -6,7 +6,155 @@
   <%= require('../modules/widget-section/widget-section.html')({
     classes: 'main-layout__col main-layout__col--desktop50 widget-section--scripts',
     data: {
-      heading: 'Избранные сценарии'
+      heading: 'Избранные сценарии',
+      classes: {
+        cards: 'swipe-cards--scripts',
+        card: 'swipe-card--script swipe-cards__card'
+      },
+      cards: [
+        {
+          icon: 'icon-sun--active',
+          title: 'Выключить весь свет в доме и во дворе'
+        },
+        {
+          icon: 'icon-scheduled',
+          title: 'Я ухожу'
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Включить свет в&nbsp;коридоре'
+        },
+        {
+          icon: 'icon-temperature--active',
+          title: 'Набрать горячую ванну',
+          status: 'Начнётся в 18:00'
+        },
+        {
+          icon: 'icon-temperature--active',
+          title: 'Сделать пол тёплым во всей квартире'
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Выключить весь свет в доме и во дворе'
+        },
+        {
+          icon: 'icon-scheduled',
+          title: 'Я ухожу'
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Включить свет в&nbsp;коридоре'
+        },
+        {
+          icon: 'icon-temperature--active',
+          title: 'Набрать горячую ванну',
+          status: 'Начнётся в 18:00'
+        },
+        {
+          icon: 'icon-temperature--active',
+          title: 'Сделать пол тёплым во всей квартире'
+        }
+      ]
+    },
+  }) %>
+  <%= require('../modules/widget-section/widget-section.html')({
+    classes: 'main-layout__col widget-section--devices',
+    data: {
+      heading: 'Избранные устройства',
+      classes: {
+        cards: 'swipe-cards--devices',
+        card: 'swipe-card--device swipe-cards__card'
+      },
+      filters: [
+        {
+          title: 'Все',
+          slug: 'all'
+        }, 
+        {
+          title: 'Кухня',
+          slug: 'kitchen'
+        },
+        { 
+          title: 'Зал',
+          slug: 'lounge'
+        },
+        {
+          title: 'Лампочки',
+          slug: 'bulbs'
+        }, 
+        { 
+          title: 'Камеры',
+          slug: 'cameras'
+        }
+      ],
+      cards: [
+        {
+          icon: 'icon-sun--active',
+          title: 'Xiaomi Yeelight LED Smart Bulb',
+          status: 'Включено',
+          cat: ['lounge', 'bulbs']
+        },
+        {
+          icon: 'icon-sun',
+          title: 'D-Link Omna 180 Cam',
+          status: 'Включится в 17:00',
+          cat: ['kitchen', 'cameras']
+        },
+        {
+          icon: 'icon-temperature',
+          title: 'Elgato Eve Degree Connected',
+          status: 'Выключено до 17:00',
+          cat: ['lounge']
+        },
+        {
+          icon: 'icon-sun',
+          title: 'LIFX Mini Day & Dusk A60 E27',
+          status: 'Включится в 17:00',
+          cat: ['kitchen', 'bulbs']
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Xiaomi Mi Air Purifier 2S',
+          status: 'Включено',
+          cat: ['kitchen']
+        },
+        {
+          icon: 'icon-sun',
+          title: 'Philips Zhirui',
+          status: 'Выключено',
+          cat: ['bulbs', 'lounge']
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Xiaomi Yeelight LED Smart Bulb',
+          status: 'Включено',
+          cat: ['bulbs', 'kitchen']
+        },
+        {
+          icon: 'icon-sun',
+          title: 'D-Link Omna 180 Cam',
+          status: 'Включится в 17:00',
+          cat: ['cameras', 'lounge']
+        },
+        {
+          icon: 'icon-temperature',
+          title: 'Elgato Eve Degree Connected',
+          status: 'Выключено до 17:00',
+          cat: ['lounge']
+        },
+        {
+          icon: 'icon-sun',
+          title: 'LIFX Mini Day & Dusk A60 E27',
+          status: 'Включится в 17:00',
+          cat: ['kitchen', 'bulbs']
+        },
+        {
+          icon: 'icon-sun--active',
+          title: 'Xiaomi Mi Air Purifier 2S',
+          status: 'Включено',
+          cat: ['kitchen']
+        }
+      ]
     },
   }) %>
 </section>

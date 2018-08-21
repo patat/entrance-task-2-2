@@ -1,0 +1,98 @@
+/* ==========================================================================
+   # Device filters widget
+   ========================================================================== */
+.filters {
+    position: relative;
+    top: calc(var(--sizePixel) * -2);
+    width: calc(var(--sizePixel) * 120);
+    height: calc(var(--sizePixel) * 30);   
+}
+
+  .filters__bg {
+    position: absolute;
+    left: 0;
+    right: calc(var(--sizePixel) * -15);
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: calc(var(--sizePixel) * 20);
+    z-index: 1;
+    box-shadow: 0 calc(var(--sizePixel) * 3) calc(var(--sizePixel) * 3) 0 rgba(197,186,186,0.50);
+    transition: all .25s ease-in-out;
+  }
+
+  .filters__item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: inline-block;
+    background: #F7F7F7;
+    border-radius: calc(var(--sizePixel) * 20);
+    font-size: calc(var(--sizePixel) * 13);
+    line-height: 2.1;
+    font-weight: bold;
+    padding-left: calc(var(--sizePixel) * 16);
+    padding-right: calc(var(--sizePixel) * 16);
+    padding-top: var(--sizePixel);
+    padding-bottom: calc(var(--sizePixel) * 2);
+    user-select: none;
+    transition: all .3s ease-in-out;
+  }
+
+  .filters__dropdown-icon {
+    display: none;
+    position: absolute;
+    right: calc(var(--sizePixel) * 15);
+    top: calc(var(--sizePixel) * 10);
+    width: calc(var(--sizePixel) * 11);
+    height: calc(var(--sizePixel) * 11);
+    transform: rotate(270deg);
+  }
+
+  .filters__item--active {
+    background: #FFD93E;
+    z-index: 3;
+    opacity: 1 !important;
+    visibility: visible;
+    padding-right: calc(var(--sizePixel) * 31);
+    & .filters__dropdown-icon {
+      display: block;
+    }
+  }
+
+.filters--expand {
+  & .filters__item {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1366px) {
+  .filters {
+    display: flex;
+    margin-left: calc(var(--sizePixel) * 3);
+    top: 0;
+  }
+
+    .filters__item {
+      position: static;
+      margin-left: calc(var(--sizePixel) * 10);
+      padding-left: calc(var(--sizePixel) * 15);
+      padding-right: calc(var(--sizePixel) * 11);
+      cursor: pointer;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .filters__item--active {
+      padding-right: calc(var(--sizePixel) * 11);
+      & .filters__dropdown-icon {
+        display: none;
+      }
+    }
+}
+
+

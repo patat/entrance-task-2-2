@@ -21,7 +21,6 @@
 @media (min-width: 1366px) {
   .content-section {
     padding-top: calc(var(--sizePixel) * 15);
-    padding-bottom: calc(var(--sizePixel) * 20);
   }
 
   .content-section__header {

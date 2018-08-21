@@ -5,8 +5,30 @@
   
 }
 
+  .widget-section__header-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+.widget-section--devices {
+  padding-top: calc(var(--sizePixel) * 10);
+}
+
 @media (min-width: 1366px) {
+  .widget-section__header-group {
+    display: flex;
+    width: auto;
+  }
   .widget-section--scripts {
     padding-left: calc(var(--sizePixel) * 13);
+  }
+  .widget-section--devices {
+    padding-top: calc(var(--sizePixel) * 15);
+
+    & .widget-section__controls {
+      margin-top: calc(var(--sizePixel) * 10);
+    }
   }
 }
