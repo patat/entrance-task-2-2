@@ -2,15 +2,9 @@ export default class WidgetSlider {
   constructor(el, options = {}) {
     this.sliderCursor = el.querySelector('.slider__cursor');
     this.isVertical = window.innerWidth < 1366;
-    this.cursorDisplacement = this.isVertical 
-                              ? Number.parseInt(this.sliderCursor.style.right, 10) || 0
-                              : Number.parseInt(this.sliderCursor.style.left, 10) || 0;
+    this.cursorDisplacement = Number.parseInt(this.sliderCursor.style.left, 10) || 0;
 
-    if (this.isVertical) {
-      this.sliderCursor.style.left = this.cursorDisplacement + 'px';
-    } else {
-      this.sliderCursor.style.left = this.cursorDisplacement + 'px';
-    }
+    this.sliderCursor.style.left = this.cursorDisplacement + 'px';
 
     this.tracking = false;
 
@@ -34,7 +28,6 @@ export default class WidgetSlider {
       this.prevCoord = this.isVertical ? ev.clientY : ev.clientX;
       this.tracking = true;
     }
-    console.log(this.sliderCursor, this.minDisplacement, this.maxDisplacement);
   }
 
   sliderMove(ev) {
@@ -61,8 +54,6 @@ export default class WidgetSlider {
 
         this.sliderCursor.style.left = nextDisplacement + 'px';
       });
-
-      console.log(nextDisplacement, this.sliderCursor.style.left);
     }
   }
 
