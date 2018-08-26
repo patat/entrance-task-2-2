@@ -49,7 +49,7 @@ export default function swipeCards(cardsClass, options = {}) {
     slideWidth = options.perSlide * 13.4375;
     if (cardsClass === '.swipe-cards--scripts') {
       // in pixels
-      slideWidth = swipeCardsSlides[0].offsetWidth;
+      slideWidth = swipeCardsSlides[0].offsetWidth + 1; // to ensure cards wrap correctly
     }
 
     numSlides = Math.floor(cards.length / options.perSlide) + (cards.length % options.perSlide === 0 ? 0 : 1);
@@ -280,13 +280,6 @@ export default function swipeCards(cardsClass, options = {}) {
           initCardsCarousel(filteredCards);
         }
       });
-    });
-  }
-
-  function initFilteringMobile(cards) {
-    const filters = swipeCards.parentNode.parentNode.querySelectorAll('.filters__item');
-    filters.forEach(filter => {
-
     });
   }
 }

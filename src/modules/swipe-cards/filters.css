@@ -31,12 +31,12 @@
     background: #F7F7F7;
     border-radius: calc(var(--sizePixel) * 20);
     font-size: calc(var(--sizePixel) * 13);
-    line-height: 2.1;
+    line-height: calc(28 / 13);
     font-weight: bold;
     padding-left: calc(var(--sizePixel) * 16);
     padding-right: calc(var(--sizePixel) * 16);
     padding-top: var(--sizePixel);
-    padding-bottom: calc(var(--sizePixel) * 2);
+    padding-bottom: calc(var(--sizePixel) * 1);
     user-select: none;
     transition: all .3s ease-in-out;
   }
@@ -49,6 +49,7 @@
     width: calc(var(--sizePixel) * 11);
     height: calc(var(--sizePixel) * 11);
     transform: rotate(270deg);
+    transition: transform .3s;
   }
 
   .filters__item--active {
@@ -67,6 +68,9 @@
     visibility: visible;
     opacity: 1;
     z-index: 2;
+  }
+  & .filters__dropdown-icon {
+    transform: rotate(0deg);
   }
 }
 

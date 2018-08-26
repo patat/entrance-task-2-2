@@ -2,7 +2,10 @@
    # Widget Slider
    ========================================================================== */
 .widget-slider {
-
+  position: relative;
+  touch-action: none;
+  user-select: none;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
   .widget-slider__options {
@@ -18,7 +21,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: calc(var(--sizePixel) * -15);
+    bottom: calc(var(--sizePixel) * -30);
     overflow-x: scroll;
   }
 
@@ -52,13 +55,17 @@
   }
 
 .slider {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(var(--sizePixel) * -168);
+  top: calc(var(--sizePixel) * 192);
   height: calc(var(--sizePixel) * 60);
   border-radius: calc(var(--sizePixel) * 30);
   background-image: linear-gradient(85deg, #FFE682 2%, #FF9E00 98%);
   width: calc(var(--sizePixel) * 336);
   background-image: linear-gradient(85deg, #FFE682 2%, #FF9E00 98%);
-  transform: rotate(-90deg) translate(calc(var(--sizePixel) * -157), calc(var(--sizePixel) * -21));
+  transform-origin: center center;
+  transform: rotate(-90deg);
 }
   .slider__before,
   .slider__after {
@@ -84,13 +91,12 @@
   .slider__cursor {
     position: absolute;
     top: 0;
-    left: 0;
     width: calc(var(--sizePixel) * 60);
     height: calc(var(--sizePixel) * 60);
     border: 3px solid rgba(51,51,51,0.10);
     border-radius: calc(var(--sizePixel) * 30);
     z-index: 2;
-    transform: translateX(300%);
+    cursor: pointer;
 
     &:before {
       display: block;
@@ -127,6 +133,9 @@
 }
 
 @media (min-width: 1366px) {
+  .widget-slider {
+    padding-bottom: calc(var(--sizePixel) * 81);
+  }
   .widget-slider__option {
     font-weight: bold;
   }
@@ -135,6 +144,10 @@
     margin-top: calc(var(--sizePixel) * 21);
     width: auto;
     transform: none;
+    margin: 0;
+    top: calc(var(--sizePixel) * 54);
+    left: 0;
+    right: 0;
   }
 
   .widget-slider--temperature {

@@ -150,6 +150,9 @@
 }
 
 @media (min-width: 1366px) {
+.modal {
+  overflow: hidden;
+}
   .open-modal {
     position: static;
   }

@@ -128,15 +128,16 @@
       top: 0;
       bottom: 0;
       left: 0;
-      right: calc(var(--sizePixel) * -15);
-      overflow: scroll;
+      right: calc(var(--sizePixel) * -30);
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
 
     & .swipe-cards__slide {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
+      right: calc(var(--sizePixel) * 30);
       bottom: auto;
       display: flex;
       flex-direction: column;
